@@ -37,19 +37,23 @@ function printTeacher(firstName: string, lastName: string): string {
   return `${firstName[0]}. ${lastName}`;
 }
 
+// Décrit le type du constructeur avec le mot-clé new.
 interface StudentConstructorInterface {
   new(firstName: string, lastName: string): StudentClassInterface;
 }
 
+// Décrit les méthodes obligatoires que la classe doit avoir.
 interface StudentClassInterface {
   workOnHomework(): string;
   displayName(): string;
 }
 
+// Crée une classe qui respecte l’interface grâce à implements.
 class StudentClass implements StudentClassInterface {
   firstName: string;
   lastName: string;
 
+  // Initialise les propriétés lors de la création de l’objet.
   constructor(firstName: string, lastName: string) {
     this.firstName = firstName;
     this.lastName = lastName;
